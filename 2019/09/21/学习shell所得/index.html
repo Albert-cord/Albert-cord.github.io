@@ -200,19 +200,19 @@
     <nav id="title-list-nav">
         
         <a  class=""
-           href="/2019/09/21/学习shell所得/"
-           data-tag="Shell,Linux,CI"
-           data-author="" >
-            <span class="post-title" title="学习shell所得">学习shell所得</span>
-            <span class="post-date" title="2019-09-21 19:42:38">2019/09/21</span>
-        </a>
-        
-        <a  class=""
            href="/2019/09/22/hello-world/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello-World">Hello-World</span>
             <span class="post-date" title="2019-09-22 19:42:38">2019/09/22</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/21/学习shell所得/"
+           data-tag="Shell,Linux,CI"
+           data-author="" >
+            <span class="post-title" title="学习shell所得">学习shell所得</span>
+            <span class="post-date" title="2019-09-21 19:42:38">2019/09/21</span>
         </a>
         
     </nav>
@@ -245,7 +245,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-22 17:36:58'>2019-09-21 19:42</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-22 17:41:46'>2019-09-21 19:42</time>
         
     </div>
     <div class="article-meta">
@@ -285,7 +285,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="学习Shell所得"><a href="#学习Shell所得" class="headerlink" title="学习Shell所得"></a>学习Shell所得</h1><h2 id="前言提要"><a href="#前言提要" class="headerlink" title="前言提要"></a>前言提要</h2><p>  前几周团队内部推荐我去帮忙公司一个平台CI流程脚本编写，我一开始以为是有人带我写的，后来发现并不是，要自己开头。那也没啥好说，这几天学习一下Shell并思考实现需求的流程，先放一张思维导图，这篇文章以这个导图为方向，结合我的实现流程思考写</p>
-<p><img src="/asset/img/shell.jpg" alt="Shell" title="Shell"></p>
+<p><img src="/public/img/shell.jpg" alt="Shell" title="Shell"></p>
 <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>  Linux是为了抵制Unix类商业系统而兴起的开源操作系统，由大名鼎鼎的Linux编写及众多开源大佬维护，Shell终端是与Linux内核连接通信的前端，其中我分为三部分，shell、Linux内核、解释器;<br>  其实我了解到不止bash, dash, zsh三类shell，其中zsh较为全面强大，bash shell是比较通用，我讲述就以bash shell为主</p>
 <h3 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h3><p>  前面也介绍了shell终端是与linux通讯的程序，就是大家通常所说的文本命令行程序（CLI, Command Line Interface),大家也常叫DOS界面<br>  它一般具有以下几个功能</p>
 <ul>
@@ -356,7 +356,30 @@
 </tr>
 </tbody></table>
 <p>cp 复制命令</p>
-<p>| cp -b | cp -d | cp -f |  cp -l | cp -p | cp -r |  cp -R |  cp -s |<br>| —- | —- | —- | —- | —- | —- | —- | —- | —- |<br>| 备份 | 保留 | 覆盖 | 硬链接 | 尽力保留文件属性 | 递归复制文件 | 递归复制目录 | 软链接 |</p>
+<table>
+<thead>
+<tr>
+<th>cp -b</th>
+<th>cp -d</th>
+<th>cp -f</th>
+<th>cp -l</th>
+<th>cp -p</th>
+<th>cp -r</th>
+<th>cp -R</th>
+<th>cp -s</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>备份</td>
+<td>保留</td>
+<td>覆盖</td>
+<td>硬链接</td>
+<td>尽力保留文件属性</td>
+<td>递归复制文件</td>
+<td>递归复制目录</td>
+<td>软链接</td>
+</tr>
+</tbody></table>
 <p>其中说明一下硬链接会保存源文件信息与备份，而软链接则只会保存信息</p>
 <p>mv 重命名</p>
 <p>rm 删除</p>
@@ -422,7 +445,7 @@
     <p><span class="copy-title">文章字数:</span><span class="post-count">1.4k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Albert-cord">Albert-cord</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-21, 19:42:38</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-22, 17:36:58</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-22, 17:41:46</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/21/学习shell所得/" title="学习shell所得">http://yoursite.com/2019/09/21/学习shell所得/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
